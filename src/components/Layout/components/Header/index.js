@@ -12,6 +12,7 @@ import Tippy from "@tippyjs/react/headless";
 import images from "../../../../assets/images";
 import { Wrapper as WrapperPopper } from "../../../Popper";
 import SearchResultItem from "../../../SearchResultItem";
+import Button from "../../../Button";
 const cx = classNames.bind(styles);
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
@@ -55,11 +56,23 @@ function Header() {
         </Tippy>
 
         <div className={cx("action")}>
-          <button className={cx("upload-btn")}>
+          <Button
+            upload
+            onClick={() => {
+              alert("CLicked!!!");
+            }}
+          >
             <FontAwesomeIcon icon={faPlus} className={cx("upload-icon")} />
             <span className={cx("upload-span-text")}>Tải lên</span>
-          </button>
-          <button className={cx("login-btn")}>Đăng nhập</button>
+          </Button>
+          <Button
+            primary
+            onClick={() => {
+              alert("Clicked!!!");
+            }}
+          >
+            Đăng nhập
+          </Button>
         </div>
       </div>
     </header>

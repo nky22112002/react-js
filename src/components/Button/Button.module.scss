@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  + .wrapper {
+    margin-left: 16px;
+  }
+}
+.primary {
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "IBM Plex Sans", TikTokFont, Arial, Tahoma, PingFangSC,
+    sans-serif;
+  background-color: rgba(254, 44, 85, 1);
+  color: rgba(255, 255, 255, 1);
+  min-height: 36px;
+  min-width: 100px;
+  &:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+      #fe2c55;
+  }
+}
+
+.upload {
+  min-width: 110px;
+  height: 36px;
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  background: rgba(255, 255, 255, 1);
+  justify-content: center;
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+
+.large {
+  color: rgba(254, 44, 85, 1);
+  border-color: rgba(254, 44, 85, 1);
+  background-color: rgba(255, 255, 255, 1);
+  min-width: 168px;
+  min-height: 48px;
+  font: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  width: 100%;
+  &:hover {
+    background-color: rgba(254, 44, 85, 0.06);
+  }
+}
