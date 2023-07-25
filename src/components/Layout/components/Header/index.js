@@ -5,6 +5,10 @@ import {
   faSpinner,
   faMagnifyingGlass,
   faPlus,
+  faEllipsisVertical,
+  faEarthAsia,
+  faCircleQuestion,
+  faKeyboard,
 } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
@@ -13,7 +17,25 @@ import images from "../../../../assets/images";
 import { Wrapper as WrapperPopper } from "../../../Popper";
 import SearchResultItem from "../../../SearchResultItem";
 import Button from "../../../Button";
+import Menu from "../../../Popper/Menu";
 const cx = classNames.bind(styles);
+
+const MENU_ITEMS = [
+  {
+    leftIcon: <FontAwesomeIcon icon={faEarthAsia} />,
+    title: "Tiếng Việt",
+  },
+  {
+    leftIcon: <FontAwesomeIcon icon={faCircleQuestion} />,
+    title: "Phản hồi và trợ giúp",
+    to: "/feedback",
+  },
+  {
+    leftIcon: <FontAwesomeIcon icon={faKeyboard} />,
+    title: "Phím tắt trên bàn phím",
+  },
+];
+
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
 
@@ -73,6 +95,11 @@ function Header() {
           >
             Đăng nhập
           </Button>
+          <Menu items={MENU_ITEMS}>
+            <button className={cx("more-btn")}>
+              <FontAwesomeIcon icon={faEllipsisVertical} />
+            </button>
+          </Menu>
         </div>
       </div>
     </header>
